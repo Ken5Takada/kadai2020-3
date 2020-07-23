@@ -7,26 +7,26 @@
   　<div>電卓くん</div>
   　<input />
   　<script>
-  　function update( _v ) 
-  　{
-      document.querySelector( 'input' ).value = _v
-  　}
+  　　function update( _v ) 
+  　　{
+     　 document.querySelector( 'input' ).value = _v
+  　　}
 
-  　function append( _v )
-  　{
-      document.querySelector( 'input' ).value += _v
-  　}
+  　　function append( _v )
+  　　{
+    　  document.querySelector( 'input' ).value += _v
+  　　}
 
-  　function calc() 
-  　{
-      const v = document.querySelector( 'input' ).value
-      try {
-          const f = new Function( 'return ' + v )
-          update( f().toString() )
-      } catch( _error ) {
-          update( _error ) 
-      }
-  　}
+  　　function calc() 
+  　　{
+    　  const v = document.querySelector( 'input' ).value
+     　 try {
+         　 const f = new Function( 'return ' + v )
+       　   update( f().toString() )
+     　　　 } catch( _error ) {
+         　　 update( _error ) 
+    　 　　 }
+  　　}
   </script>
   　<button onclick="append( '1' )" >1</button>
   　<button onclick="append( '2' )" >2</button>
